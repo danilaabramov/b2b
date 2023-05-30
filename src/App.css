@@ -54,7 +54,7 @@ select:-webkit-autofill:focus {
 }
 
 p {
-    font-size: 20px;
+    font-size: 16px;
 }
 
 a {
@@ -63,9 +63,6 @@ a {
 
 .App {
     min-height: 100vh;
-}
-
-main {
 }
 
 li {
@@ -100,7 +97,7 @@ ul {
     gap: 5px;
     justify-content: center;
     align-items: center;
-    padding: 10px;
+    padding: 10px 20px;
     color: #fff;
     height: 25px;
     transition: width .1s linear;
@@ -118,11 +115,11 @@ a > .logo {
     font-family: PlateiaBold, serif;
     line-height: 71px;
     height: 71px;
-    margin-top: -15px;
+    margin-top: -12px;
 }
 
 .main-header-container {
-    width: calc(100% - 200px);
+    width: calc(100% - 63px);
     height: 100%;
     display: flex;
     justify-content: right;
@@ -203,7 +200,7 @@ a > .logo {
 }
 
 .main-container {
-    margin-top: 40px;
+    margin: 40px 0;
     width: 100%;
     justify-content: center;
     display: flex;
@@ -212,7 +209,7 @@ a > .logo {
 
 .left-header-container {
     display: flex;
-    width: 200px;
+    width: 63px;
 }
 
 .right-header-container {
@@ -245,15 +242,6 @@ a > .logo {
 }
 
 
-@media (max-width: 400px) {
-    .h1-title {
-        font-size: 16px;
-    }
-
-    .top-banner-description {
-        padding: 0 20px;
-    }
-}
 
 .link-social-container {
     cursor: pointer;
@@ -421,7 +409,7 @@ a > .logo {
 
 @media (max-width: 720px) {
     .logo {
-        margin-top: 7px;
+        margin-top: 10px;
     }
 
     .form-title {
@@ -465,10 +453,6 @@ a > .logo {
         margin: 20px -20px;
     }
 
-    .active-header {
-        position: fixed;
-    }
-
     .header {
         transition: border 1s;
     }
@@ -478,6 +462,7 @@ a > .logo {
     }
 
     .active-header {
+        position: fixed;
         margin: 0 -40px;
         padding: 0 40px;
         width: 100vw;
@@ -491,6 +476,15 @@ a > .logo {
     .top-active-mobile-buttons {
         opacity: 1;
         transition: opacity .1s;
+    }
+
+    .main {
+        margin: 0 20px
+    }
+
+    .header {
+        padding: 0 20px;
+        width: calc(100% - 40px);
     }
 }
 
@@ -631,8 +625,9 @@ td:nth-child(3) {
     font-family: PlateiaBold, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', serif,
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
-    font-size: 64px;
-    margin: 0;
+    font-size: 44px;
+    margin: 0 0 20px;
+    padding: 0;
 }
 
 @media (max-width: 780px) {

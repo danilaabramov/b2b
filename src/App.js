@@ -1,4 +1,4 @@
-import {useEffect, useState, useRef} from "react";
+import {useEffect, useState} from "react";
 import {Routes, Route, Link} from 'react-router-dom';
 import ButtonBar from "./components/ButtonBar";
 import MenuIcon from "./icons/menu";
@@ -6,6 +6,7 @@ import HomePage from "./pages/HomePage";
 import ConsultingPage from "./pages/ConsultingPage";
 import BanksPage from "./pages/BanksPage";
 import StatePage from "./pages/StatePage";
+import B2BPurchasesPage from "./pages/B2BPurchasesPage";
 
 function App() {
     const [windowWidth, setWindowWidth] = useState(window.innerWidth);
@@ -54,6 +55,9 @@ function App() {
                             <Link to="/state">
                                 <ButtonBar text='Гос поддержка'/>
                             </Link>
+                            <Link to="/b2b-purchases">
+                                <ButtonBar text='Закупки b2b'/>
+                            </Link>
                         </div>
                     </div>
                     <div className='right-header-container' style={{opacity: animate ? 1 : 0}}>
@@ -77,6 +81,9 @@ function App() {
                         <Link to="/state" onClick={() => setActiveBar(a => !a)}>
                             <ButtonBar text='Гос поддержка' menu/>
                         </Link>
+                        <Link to="/b2b-purchases" onClick={() => setActiveBar(a => !a)}>
+                            <ButtonBar text='Закупки B2B' menu/>
+                        </Link>
                     </div>
                 </div>
 
@@ -91,6 +98,7 @@ function App() {
                     <Route path="/consulting" exact element={<ConsultingPage/>}/>
                     <Route path="/banks" exact element={<BanksPage/>}/>
                     <Route path="/state" exact element={<StatePage/>}/>
+                    <Route path="/b2b-purchases" exact element={<B2BPurchasesPage/>}/>
                 </Routes>
             </div>
 
