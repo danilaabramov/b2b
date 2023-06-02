@@ -463,10 +463,10 @@ a > .logo {
 
     .active-header {
         position: fixed;
-        margin: 0 -40px;
+        margin: 0 -60px;
         padding: 0 40px;
-        width: 100vw;
-        overflow: hidden;
+        width: calc(100vw + 40px);
+        overflow: scroll;
         height: 100vh;
         background: #111111;
         transition: height 1s;
